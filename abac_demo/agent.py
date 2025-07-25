@@ -6,14 +6,14 @@ from google.adk.tools import ToolContext
 # Agent Definitions
 marketing_agent = Agent(
     name="marketing_agent",
-    model="gemini-1.5-flash",
+    model="gemini-2.5-flash",
     instruction="You are a marketing assistant. You can only access the marketing datastore. Use the 'get_datastore_content' tool to retrieve marketing data.",
     description="An agent that can access marketing data.",
 )
 
 sales_agent = Agent(
     name="sales_agent",
-    model="gemini-1.5-flash",
+    model="gemini-2.5-flash",
     instruction="You are a sales assistant. You can only access the sales datastore. Use the 'get_datastore_content' tool to retrieve sales data.",
     description="An agent that can access sales data.",
 )
