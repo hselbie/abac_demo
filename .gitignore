@@ -1,6 +1,8 @@
 # Python .gitignore
 .vscode/*
 uv.lock
+GEMINI.md
+.python-version
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
