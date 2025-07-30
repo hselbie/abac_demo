@@ -4,10 +4,9 @@ from google.adk.agents.callback_context import CallbackContext
 from google.adk.models import LlmRequest, LlmResponse
 from google.cloud import modelarmor_v1
 from google.genai import types as genai_types
-from model_armor_demo.tools.sensitive_tool import handle_sensitive_data
 
 # Set the GOOGLE_CLOUD_PROJECT environment variable
-GOOGLE_CLOUD_PROJECT_ID = "zinc-forge-302418"
+GOOGLE_CLOUD_PROJECT_ID = "YOUR_PROJECT_ID"
 #GOOGLE_CLOUD_LOCATION = "us-central1"
 GOOGLE_CLOUD_LOCATION = "global"
 TEMPLATE_ID = "ma-all-low"

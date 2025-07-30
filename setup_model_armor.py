@@ -5,7 +5,7 @@ from google.cloud import modelarmor_v1
 
 # --- Configuration ---
 # These values are used to create the template.
-PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID", "zinc-forge-302418")
+PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID", "YOUR_PROJECT_ID")
 LOCATION = os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1")
 TEMPLATE_ID = "ma-all-low" # The template ID your agent uses
 
