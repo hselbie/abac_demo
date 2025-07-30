@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug ADK Web (from Agent Folder)",
+            "type": "python",
+            "request": "launch",
+            "module": "google.adk.cli.__main__",
+            "args": [
+                "web" // The 'web' subcommand to start the server
+            ],
+            "cwd": "${workspaceFolder}", // <<--- !!! ADJUST THIS PATH !!!
+            "console": "integratedTerminal", // Display output in VS Code's terminal
+            "justMyCode": false, // Set to 'false' to allow stepping into ADK source files
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        }
+    ]
+}
