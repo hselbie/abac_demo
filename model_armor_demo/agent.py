@@ -6,7 +6,7 @@ from google.cloud import modelarmor_v1
 from google.genai import types as genai_types
 
 # Set the GOOGLE_CLOUD_PROJECT environment variable
-GOOGLE_CLOUD_PROJECT_ID = "YOUR_PROJECT_ID"
+GOOGLE_CLOUD_PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT_ID")
 #GOOGLE_CLOUD_LOCATION = "us-central1"
 GOOGLE_CLOUD_LOCATION = "global"
 TEMPLATE_ID = "ma-all-low"
@@ -17,7 +17,7 @@ worker_agent = Agent(
     model="gemini-2.5-flash",
     instruction="You are a worker agent. You can handle sensitive data.",
     description="An agent that can handle sensitive data.",
-    tools=[handle_sensitive_data],
+    # tools=[handle_sensitive_data],
 )
 
 # Model Armor Callback
