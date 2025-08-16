@@ -24,15 +24,15 @@ class EnvVars(str, Enum):
 
 CREDENTIALS_TYPE = AuthCredentialTypes.OAUTH2
 
-def whoami(callback_context: CallbackContext):
-  """Prints the user's email address."""
-  print("**** PREREQ SETUP ****")
-  access_token = callback_context.state[f"temp:{EnvVars.AUTH_ID}"]
-  creds = Credentials(token=access_token)
-  user_info_service = build("oauth2", "v2", credentials=creds)
-  user_info = user_info_service.userinfo().get().execute()
-  user_email = user_info.get("email")
-  print(f"The person who is just authorized is {user_email}")
+# def whoami(callback_context: CallbackContext):
+#   """Prints the user's email address."""
+#   print("**** PREREQ SETUP ****")
+#   access_token = callback_context.state[f"temp:{EnvVars.AUTH_ID}"]
+#   creds = Credentials(token=access_token)
+#   user_info_service = build("oauth2", "v2", credentials=creds)
+#   user_info = user_info_service.userinfo().get().execute()
+#   user_email = user_info.get("email")
+#   print(f"The person who is just authorized is {user_email}")
 
 
 # Define BigQuery tool config
